@@ -6,6 +6,21 @@
   <router-view/>
 </template>
 
+<script>
+
+import {mapActions} from 'vuex'
+
+export default {
+  computed: {
+    ...mapActions(['cargarGatos'])
+  },
+  async created() {
+    await this.cargarGatos;
+  }
+}
+
+</script>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
