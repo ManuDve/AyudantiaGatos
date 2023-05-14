@@ -14,16 +14,8 @@
 import {mapState} from 'vuex'
 
 export default {
-  data() {
-    return {
-      gatos: null
-    }
-  },
   computed: {
     ...mapState(['listaGatos'])
-  },
-  created() {
-    this.gatos = this.listaGatos
   }
 }
 </script>
